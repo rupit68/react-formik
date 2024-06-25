@@ -1,29 +1,46 @@
 
-import { useFormik } from 'formik';
-import './App.css';
-import { useState } from 'react';
+// import { useFormik } from 'formik';
+// import './App.css';
+// import { useState } from 'react';
+
+import Demo from "./Demo";
 
 function App() {
-  const[data,setdata]=useState([])
-  let deletedata=(index)=>{      
-    let copy=[...data]
-    copy.splice(index,1)
-    setdata(copy)
-  }
-  const formik=useFormik({
-    initialValues:{
-      name:'',
-      surname:''
-    },
-    onSubmit:values=>{
-      setdata([...data,values])
-      formik.resetForm()
-    }
-    
-  })
+  // const[data,setdata]=useState([])
+  // const[id,setid]=useState(null)
+  // let deletedata=(index)=>{      
+  //   let copy=[...data]
+  //   copy.splice(index,1)
+  //   setdata(copy)
+  // }
+  // const formik=useFormik({
+  //   initialValues:{
+  //     name:'',
+  //     surname:''
+  //   },
+  //   onSubmit:values=>{
+  //     if (id!==null) {
+  //       let copydata=[...data]
+  //       copydata[id]=values
+  //       setdata(copydata)
+  //       setid(null)
+  //     }
+  //     else{
+  //       setdata([...data,values])
+  //     }
+  //     formik.resetForm()
+  //   }    
+  // })
+  // const updatedata=(iteam,index)=>{
+  //   formik.setValues({
+  //     name:iteam.name,
+  //     surname:iteam.surname
+  //   })
+  //   setid(index)
+  // }
   return (
     <div className="App">
-      <form action="" onSubmit={formik.handleSubmit}>
+      {/* <form action="" onSubmit={formik.handleSubmit}>
         <table>
           <tr>
             <td>name</td>
@@ -43,6 +60,8 @@ function App() {
         <tr>
           <td>name</td>
           <td>surname</td>
+          <td>delete</td>
+          <td>update</td>
         </tr>
         {
           data.map((iteam,index)=>(
@@ -50,10 +69,12 @@ function App() {
               <td>{iteam.name}</td>
               <td>{iteam.surname}</td>
               <td><button onClick={()=>{deletedata(index)}}>delete</button></td>
+              <td><button onClick={()=>{updatedata(iteam,index)}}>update</button></td>
             </tr>
           ))
         }
-      </table>
+      </table> */}
+      <Demo></Demo>
     </div>
   );
 }
