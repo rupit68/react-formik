@@ -2,8 +2,8 @@
 // import { useFormik } from 'formik';
 // import './App.css';
 // import { useState } from 'react';
-
-import Demo from "./Demo";
+import New from "./New";
+// import Demo from "./Demo";
 
 function App() {
   // const[data,setdata]=useState([])
@@ -74,7 +74,8 @@ function App() {
           ))
         }
       </table> */}
-      <Demo></Demo>
+      {/* <Demo></Demo> */}
+      <New></New>
     </div>
   );
 }
