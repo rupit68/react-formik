@@ -11,6 +11,9 @@ const New = () => {
         copydata.splice(index,1)
         setdata(copydata)
     }
+    const updatedata=(iteam,index)=>{
+        console.log();
+    }
   return (
     <div>
    
@@ -39,6 +42,7 @@ const New = () => {
                     <td>{iteam.name}</td>
                     <td>{iteam.surname}</td>
                     <td><button onClick={()=>{deletedata(index)}}>delete</button></td>
+                    <td><button onClick={(iteam,index)=>{updatedata(index)}}>update</button></td>
                 </tr>
             ))
         }
